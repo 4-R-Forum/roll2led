@@ -1,3 +1,7 @@
+bluetooth.onBluetoothConnected(function () {
+    bluetooth.startAccelerometerService()
+    bluetooth.startButtonService()
+})
 function doPitch () {
     if (p > 0 - t1 && p < t1) {
         basic.showLeds(`
