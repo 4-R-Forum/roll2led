@@ -27,24 +27,22 @@ function doPitch () {
             . . . . .
             . . . . .
             `)
+    } else if (p > t2) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . # . .
+            `)
     } else {
-        if (p > t2) {
-            basic.showLeds(`
-                . . . . .
-                . . . . .
-                . . . . .
-                . . . . .
-                . . # . .
-                `)
-        } else {
-            basic.showLeds(`
-                . . . . .
-                . . . . .
-                . . . . .
-                . . # . .
-                . . . . .
-                `)
-        }
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . # . .
+            . . . . .
+            `)
     }
 }
 function doRoll () {
@@ -66,30 +64,29 @@ function doRoll () {
             . . . . .
             . . . . .
             `)
+    } else if (r > t2) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . #
+            . . . . .
+            . . . . .
+            `)
     } else {
-        if (r > t2) {
-            basic.showLeds(`
-                . . . . .
-                . . . . .
-                . . . . #
-                . . . . .
-                . . . . .
-                `)
-        } else {
-            basic.showLeds(`
-                . . . . .
-                . . . . .
-                . . . # .
-                . . . . .
-                . . . . .
-                `)
-        }
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . # .
+            . . . . .
+            . . . . .
+            `)
     }
 }
 let r = 0
 let p = 0
 let t2 = 0
 let t1 = 0
+basic.showString("roll2LED")
 t1 = 20
 t2 = 40
 basic.forever(function () {
